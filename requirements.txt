@@ -1,0 +1,14 @@
+# Web scraping
+selenium==4.9.0
+webdriver-manager==3.8.6
+beautifulsoup4==4.12.2
+
+# Data processing
+pandas==1.5.3
+
+# Utility
+requests==2.28.2
+lxml==4.9.2
+
+# Logging
+logging==0.4.9.6
