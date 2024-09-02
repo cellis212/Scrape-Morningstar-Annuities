@@ -64,13 +64,19 @@ The data parser takes the raw CSV output from the web scraper and processes it i
 - The scraper is set to extract data for contract IDs 17 through 7000. Adjust this range in `scrape_annuityintel.py` if needed.
 - Login credentials are hardcoded in the script. Input your own AnnuityIntel credentials.
 
+## Current Limitations and Future Development
+
+Please note that the current version of this scraper does not pull the investment options part of the annuity data. This is the next step planned for development.
+
 ## Caution
 
 Ensure you have permission to scrape data from AnnuityIntel and use the data responsibly.
 
-## License
+## Citation
 
-[Insert your chosen license here]
+If you use this software in your research, please cite it using the following:
+
+Ellis, C. (2024). Scrape-Morningstar-Annuities. https://github.com/cellis212/Scrape-Morningstar-Annuities
 
 ## Contributors
 
@@ -80,3 +86,4 @@ Cameron Ellis
 
 - Morningstar for providing the AnnuityIntel platform
 - The Selenium and BeautifulSoup projects for their excellent web scraping tools
+
