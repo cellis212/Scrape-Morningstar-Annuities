@@ -1,6 +1,6 @@
 # Annuity Intelligence Data Scraper
 
-This repository contains code to scrape annuity data from Morningstar's AnnuityIntel platform and processes it for further analysis.
+This repository contains code to scrape individual annuity data from Morningstar's AnnuityIntel platform (https://annuityintel.com/) and processes it for further analysis.
 
 ## Project Overview
 
