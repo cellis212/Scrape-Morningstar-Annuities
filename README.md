@@ -76,7 +76,7 @@ Ensure you have permission to scrape data from AnnuityIntel and use the data res
 
 If you use this software in your research, please cite it using the following:
 
-Ellis, C. (2024). Scrape-Morningstar-Annuities. https://github.com/cellis212/Scrape-Morningstar-Annuities
+Ellis, C. (2024). Annuity Intelligence Data Scraper. https://github.com/cellis212/Scrape-Morningstar-Annuities
 
 ## Contributors
 
