@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+authors:
+  - family-names: "Ellis"
+    given-names: "Cameron"
+title: "Scrape-Morningstar-Annuities"
+version: 1.0.0
+date-released: 2024-09-02
+url: "https://github.com/cellis212/Scrape-Morningstar-Annuities"
