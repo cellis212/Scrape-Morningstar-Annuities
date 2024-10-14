@@ -251,6 +251,21 @@ def parse_benefits(lines):
     
     return benefits
 
+def parse_contract_and_company(lines):
+    contract_info = {}
+    rates_count = 0
+    for i, line in enumerate(lines):
+        if line.strip() == "Rates":
+            rates_count += 1
+            if rates_count == 2:
+                if i + 1 < len(lines) and lines[i + 1].strip():
+                    contract_info["Contract Name"] = lines[i + 1].strip()
+                if i + 2 < len(lines) and lines[i + 2].strip():
+                    contract_info["Company Name"] = lines[i + 2].strip()
+                break
+    
+    return contract_info
+
 def parse_annuity_data(file_path):
     parsed_data = []
     
@@ -270,6 +285,10 @@ def parse_annuity_data(file_path):
             lines = text.splitlines()
             
             parsed_entry = {"Annuity Number": annuity_number}
+            
+            # Add contract and company name parsing
+            contract_company_info = parse_contract_and_company(lines)
+            parsed_entry.update(contract_company_info)
             
             parsing_functions = {
                 "Contract Information": parse_contract_info,
