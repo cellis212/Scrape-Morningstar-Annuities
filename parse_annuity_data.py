@@ -42,13 +42,24 @@ def parse_contract_info(lines):
         "AM Best Rating", "Website", "Phone Number", "State Availability"
     ]
     
-    for i, line in enumerate(lines):
-        line = line.strip()
+    for i in range(len(lines) - 1):  # Iterate up to the second-to-last line
+        current_line = lines[i].strip()
+        next_line = lines[i + 1].strip()
+        
         for key in keys:
-            if key.lower() in line.lower():
-                value = line.split(':', 1)[-1].strip() if ':' in line else lines[i+1].strip()
+            if key == current_line and key not in contract_info_data:
+                value = next_line
+                
+                # Special handling for Closed Date
+                if key == "Closed Date" and value == "-":
+                    value = ""
+                
                 contract_info_data[key] = value
                 break  # Move to the next line after finding a match
+        
+        # If we've found all keys, we can stop processing
+        if len(contract_info_data) == len(keys):
+            break
     
     return contract_info_data
 
